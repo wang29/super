@@ -4,7 +4,7 @@
 #include <fstream>
 #include <string.h>
 #include <stdio.h>
-#include <conio.h>//ÓÃgetch();µ±ÓÃ»§°´ÏÂÄ³¸ö×Ö·ûÊ±£¬º¯Êı×Ô¶¯¶ÁÈ¡£¬ÎŞĞè°´»Ø³µ¡£
+#include <conio.h>//ç”¨getch();å½“ç”¨æˆ·æŒ‰ä¸‹æŸä¸ªå­—ç¬¦æ—¶ï¼Œå‡½æ•°è‡ªåŠ¨è¯»å–ï¼Œæ— éœ€æŒ‰å›è½¦ã€‚
 using namespace std;
 class Goods
 {
@@ -13,15 +13,15 @@ public:
 	{
 	}
 	int kind;
-	char name[20];//Ãû×Ö
-	char Id[20];//±àºÅ
-	char place[10];//Éú²úµØ
-	char brand[10];//Æ·ÅÆ
-	float buyprice;  //½ø»õ¼Û£»
-	float saleprice; //Âô³ö¼Û£»
-	int amount;  //´æ»õÊıÁ¿£»
-	int amount1; //ÊÛ»õÊıÁ¿£»
-	int profit;  //¾»ÀûÈó£»
+	char name[20];//åå­—
+	char Id[20];//ç¼–å·
+	char place[10];//ç”Ÿäº§åœ°
+	char brand[10];//å“ç‰Œ
+	float buyprice;  //è¿›è´§ä»·ï¼›
+	float saleprice; //å–å‡ºä»·ï¼›
+	int amount;  //å­˜è´§æ•°é‡ï¼›
+	int amount1; //å”®è´§æ•°é‡ï¼›
+	int profit;  //å‡€åˆ©æ¶¦ï¼›
 	Goods * Next;
 	void InputAll()
 	{
@@ -32,61 +32,61 @@ public:
 	}
 	void InputKind()
 	{
-		cout << "\t\tÇëÑ¡ÔñÖÖÀà£º"; cin >> kind;
+		cout << "\t\tè¯·é€‰æ‹©ç§ç±»ï¼š"; cin >> kind;
 	}
 	void InputName()
 	{
-		cout << "\t\tÇëÊäÈëÉÌÆ·µÄÃû³Æ£º";  cin >> name;
+		cout << "\t\tè¯·è¾“å…¥å•†å“çš„åç§°ï¼š";  cin >> name;
 	}
 	void InputID()
 	{
-		cout << "\t\tÇëÊäÈëÉÌÆ·µÄ±àºÅ£º";  cin >> Id;
+		cout << "\t\tè¯·è¾“å…¥å•†å“çš„ç¼–å·ï¼š";  cin >> Id;
 	}
 	void InputBuyprice()
 	{
-		cout << "\t\tÇëÊäÈë½ø»õ¼Û£º"; cin >> buyprice;
+		cout << "\t\tè¯·è¾“å…¥è¿›è´§ä»·ï¼š"; cin >> buyprice;
 	}
 	void InputSaleprice()
 	{
-		cout << "\t\tÇëÊäÈëÊÛ³ö¼Û£º"; cin >> saleprice;
+		cout << "\t\tè¯·è¾“å…¥å”®å‡ºä»·ï¼š"; cin >> saleprice;
 	}
 	void InputAmount()
 	{
-		cout << "\t\tÇëÊäÈëÊ£ÓàÉÌÆ·ÊıÁ¿£º"; cin >> amount;
+		cout << "\t\tè¯·è¾“å…¥å‰©ä½™å•†å“æ•°é‡ï¼š"; cin >> amount;
 	}
 	void InputProfit()
 	{
-		cout << "\t\tÇëÊäÈë¾»ÀûÈó£º"; cin >> profit;
+		cout << "\t\tè¯·è¾“å…¥å‡€åˆ©æ¶¦ï¼š"; cin >> profit;
 	}
 	void InputPlace()
 	{
-		cout << "\t\tÇëÊäÈëÉÌÆ·²úµØ£º"; cin >> place;
+		cout << "\t\tè¯·è¾“å…¥å•†å“äº§åœ°ï¼š"; cin >> place;
 	}
 	void Inputbrand()
 	{
-		cout << "\t\tÇëÊäÈëÉú²úÉÌÆ·ÅÆ£º"; cin >> brand;
+		cout << "\t\tè¯·è¾“å…¥ç”Ÿäº§å•†å“ç‰Œï¼š"; cin >> brand;
 	}
 	void InputOther()
 	{
-		cout << "\t\tÇëÊäÈë½ø»õ¼Û£º"; cin >> buyprice;
-		cout << "\t\tÇëÊäÈëÊÛ³ö¼Û£º"; cin >> saleprice;
-		cout << "\t\tÇëÊäÈë´æ»õÊıÁ¿£º"; cin >> amount;
-		cout << "\t\tÇëÊäÈëÉÌÆ·µÄ²úµØ£º"; cin >> place;
-		cout << "\t\tÇëÊäÈëÉú²úÉÌÆ·ÅÆ£º"; cin >> brand;
+		cout << "\t\tè¯·è¾“å…¥è¿›è´§ä»·ï¼š"; cin >> buyprice;
+		cout << "\t\tè¯·è¾“å…¥å”®å‡ºä»·ï¼š"; cin >> saleprice;
+		cout << "\t\tè¯·è¾“å…¥å­˜è´§æ•°é‡ï¼š"; cin >> amount;
+		cout << "\t\tè¯·è¾“å…¥å•†å“çš„äº§åœ°ï¼š"; cin >> place;
+		cout << "\t\tè¯·è¾“å…¥ç”Ÿäº§å•†å“ç‰Œï¼š"; cin >> brand;
 		profit = 0;
 	}
 
-	void ReadFile(istream & in) //½«ÊäÈëµÄ¶«Î÷´æÈëÎÄ¼ş
+	void ReadFile(istream & in) //å°†è¾“å…¥çš„ä¸œè¥¿å­˜å…¥æ–‡ä»¶
 	{
 		in >> name >> kind >> Id >> buyprice >> saleprice >> amount >> place >> brand >> profit;
 	}
 	void Show()
 	{
-		cout << "ÉÌÆ·Ãû: " << name << endl << "ÖÖÀà:" << kind << endl << "±àºÅ: " << Id << endl << "½ø»õ¼Û " << buyprice << endl << "ÊÛ³ö¼Û " << saleprice << endl << "Ê£ÓàÉÌÆ·ÊıÁ¿: " <<
-			amount << endl << "¾»ÀûÈó£º" << profit << endl << "ÉÌÆ·µÄ²úµØ: " << place << endl << "Éú²úÉÌÆ·ÅÆ: " << brand << endl << endl << endl;
+		cout << "å•†å“å: " << name << endl << "ç§ç±»:" << kind << endl << "ç¼–å·: " << Id << endl << "è¿›è´§ä»· " << buyprice << endl << "å”®å‡ºä»· " << saleprice << endl << "å‰©ä½™å•†å“æ•°é‡: " <<
+			amount << endl << "å‡€åˆ©æ¶¦ï¼š" << profit << endl << "å•†å“çš„äº§åœ°: " << place << endl << "ç”Ÿäº§å•†å“ç‰Œ: " << brand << endl << endl << endl;
 	}
 };
-class Goodsmessage : public Goods            //©k©k©k©k©k©k©k©k©kGoodsmessageÀà©k©k©k©k©k©k©k©k©k©k©k©k
+class Goodsmessage : public Goods         
 {
 public:
 	Goodsmessage();
@@ -109,11 +109,11 @@ public:
 			p->Show();
 			i++;
 		}
-		cout << "¹²ÓĞ" << i << "¸öÉÌÆ·" << "\n" << endl;
-		cout << "ÊäÈëÈÎÒâ×Ö·û£¡¼ÌĞø¡­¡­";
+		cout << "å…±æœ‰" << i << "ä¸ªå•†å“" << "\n" << endl;
+		cout << "è¾“å…¥ä»»æ„å­—ç¬¦ï¼ç»§ç»­â€¦â€¦";
 		_getch();
 	}
-	void AddItem()//´Ó¼üÅÌÊäÈëÉÌÆ·ĞÅÏ¢
+	void AddItem()//ä»é”®ç›˜è¾“å…¥å•†å“ä¿¡æ¯
 	{
 		system("cls");
 		End->InputName();
@@ -127,9 +127,9 @@ public:
 
 		End->Next = new Goods;
 		End = End->Next;
-		cout << "Ìí¼Ó³É¹¦!" << endl;
+		cout << "æ·»åŠ æˆåŠŸ!" << endl;
 		Save();
-		cout << "ÊäÈëÈÎÒâ×Ö·û£¡¼ÌĞø¡­¡­";
+		cout << "è¾“å…¥ä»»æ„å­—ç¬¦ï¼ç»§ç»­â€¦â€¦";
 		_getch();
 	}
 private:
@@ -139,26 +139,26 @@ private:
 	ofstream out;
 	Goods *FindItem(char * name)
 	{
-		for (Goods * p = Head; p->Next != End; p = p->Next)//Æ¥Åä³É¹¦Ôò·µ»ØÉÏÒ»¸öÖ¸Õë£¬²»³É¹¦¾Í·µ»Ø¿Õ
+		for (Goods * p = Head; p->Next != End; p = p->Next)//åŒ¹é…æˆåŠŸåˆ™è¿”å›ä¸Šä¸€ä¸ªæŒ‡é’ˆï¼Œä¸æˆåŠŸå°±è¿”å›ç©º
 		if (!strcmp(p->Next->name, name))return p;
 		return NULL;
 	}
 	Goods *FindID(char * Id)
 	{
-		for (Goods * p = Head; p->Next != End; p = p->Next)//Æ¥Åä³É¹¦Ôò·µ»ØÉÏÒ»¸öÖ¸Õë£¬²»³É¹¦¾Í·µ»Ø¿Õ
+		for (Goods * p = Head; p->Next != End; p = p->Next)//åŒ¹é…æˆåŠŸåˆ™è¿”å›ä¸Šä¸€ä¸ªæŒ‡é’ˆï¼Œä¸æˆåŠŸå°±è¿”å›ç©º
 		if (!strcmp(p->Next->Id, Id))return p;
 		return NULL;
 	}
 };
 
-Goodsmessage::Goodsmessage()                 //©k©k©k©k©k©k©k©k©k©k©k©k¹¹Ôìº¯Êı©k©k©k©k©k©k©k©k©k©k©k©k
+Goodsmessage::Goodsmessage()              
 {
 	Head = new Goods;
 	Head->Next = new Goods;
 	End = Head->Next;
 	in.open("supermarket.txt");
 	if (!in)
-		cout << "ÎŞÉÌÆ·ĞÅÏ¢¡£ÇëÏÈ½ø»õ¡£" << endl;
+		cout << "æ— å•†å“ä¿¡æ¯ã€‚è¯·å…ˆè¿›è´§ã€‚" << endl;
 	else
 	{
 		while (!in.eof())
@@ -169,12 +169,12 @@ Goodsmessage::Goodsmessage()                 //©k©k©k©k©k©k©k©k©k©k©k©k¹¹Ôìº¯Êı©
 			End = End->Next;
 		}
 		in.close();
-		cout << "\t\t\t\t¶ÁÈ¡ÉÌÆ·ĞÅÏ¢³É¹¦!" << "\n" << endl;
+		cout << "\t\t\t\tè¯»å–å•†å“ä¿¡æ¯æˆåŠŸ!" << "\n" << endl;
 	}
 }
 
 
-Goodsmessage::~Goodsmessage()                //©k©k©k©k©k©k©k©k©k©k©k©kÎö¹¹º¯Êı©k©k©k©k©k©k©k©k©k©k©k©k
+Goodsmessage::~Goodsmessage()        
 {
 	//Save();
 	for (Goods * temp; Head->Next != End;)
@@ -186,65 +186,65 @@ Goodsmessage::~Goodsmessage()                //©k©k©k©k©k©k©k©k©k©k©k©kÎö¹¹º¯Êı©
 	delete Head, End;
 }
 
-void Goodsmessage::showMenu(int n)//²Ëµ¥      //©k©k©k©k©k©k©k©k©k©k©k©k²Ëµ¥©k©k©k©k©k©k©k©k©k©k©k©k
+void Goodsmessage::showMenu(int n)//èœå•      
 {
 	switch (n)
 	{
 	case 1:
 	{
 			  cout << "********************************************************************************\n"
-				  << "      1. Ê³Æ·      2. »¯×±Æ·      3. ÈÕÓÃÆ·      4. ÒûÁÏ      \n"
+				  << "      1. é£Ÿå“      2. åŒ–å¦†å“      3. æ—¥ç”¨å“      4. é¥®æ–™      \n"
 				  << "********************************************************************************\n" << endl;
 			  break; }
 	case 2:
 	{
 			  system("cls");
-			  cout << "¨¨¨¨¨¨¨¨¨¨  ¡î   ³¬ ÊĞ ÉÌ Æ· ¹Ü Àí Ïµ  Í³     ¡î  ¨¨¨¨¨¨¨¨¨¨" << endl;
-			  cout << "¨¨¨¨¨¨¨¨¨¡ï  ¡î          1.Ôö¼Ó³¬ÊĞÉÌÆ·        ¡î  ¡ï¨¨¨¨¨¨¨¨¨" << endl;
-			  cout << "¨¨¨¨¨¨¨¨¨¡ï  ¡î          2.ÏÔÊ¾³¬ÊĞÉÌÆ·        ¡î  ¡ï¨¨¨¨¨¨¨¨¨" << endl;
-			  cout << "¨¨¨¨¨¨¨¨¨¡ï  ¡î          3.ÅÅĞòÍ³¼ÆÉÌÆ·        ¡î  ¡ï¨¨¨¨¨¨¨¨¨" << endl;
-			  cout << "¨¨¨¨¨¨¨¨¨¡ï  ¡î          4.²éÕÒ³¬ÊĞÉÌÆ·        ¡î  ¡ï¨¨¨¨¨¨¨¨¨" << endl;
-			  cout << "¨¨¨¨¨¨¨¨¨¡ï  ¡î          5.É¾³ı³¬ÊĞÉÌÆ·        ¡î  ¡ï¨¨¨¨¨¨¨¨¨" << endl;
-			  cout << "¨¨¨¨¨¨¨¨¨¡ï  ¡î          6.ĞŞ¸Ä³¬ÊĞÉÌÆ·        ¡î  ¡ï¨¨¨¨¨¨¨¨¨" << endl;
-			  cout << "¨¨¨¨¨¨¨¨¨¡ï  ¡î          7.ÊÛ³ö³¬ÊĞÉÌÆ·        ¡î  ¡ï¨¨¨¨¨¨¨¨¨" << endl;
-			  cout << "¨¨¨¨¨¨¨¨¨¡ï  ¡î        8.±£´æ³¬ÊĞÉÌÆ·ĞÅÏ¢      ¡î  ¡ï¨¨¨¨¨¨¨¨¨" << endl;
-			  cout << "¨¨¨¨¨¨¨¨¨¡ï  ¡î          0.°²È«ÍË³öÏµÍ³        ¡î  ¡ï¨¨¨¨¨¨¨¨¨" << endl;
+			  cout << "â–‰â–‰â–‰â–‰â–‰â–‰â–‰â–‰â–‰â–‰  â˜†   è¶… å¸‚ å•† å“ ç®¡ ç† ç³»  ç»Ÿ     â˜†  â–‰â–‰â–‰â–‰â–‰â–‰â–‰â–‰â–‰â–‰" << endl;
+			  cout << "â–‰â–‰â–‰â–‰â–‰â–‰â–‰â–‰â–‰â˜…  â˜†          1.å¢åŠ è¶…å¸‚å•†å“        â˜†  â˜…â–‰â–‰â–‰â–‰â–‰â–‰â–‰â–‰â–‰" << endl;
+			  cout << "â–‰â–‰â–‰â–‰â–‰â–‰â–‰â–‰â–‰â˜…  â˜†          2.æ˜¾ç¤ºè¶…å¸‚å•†å“        â˜†  â˜…â–‰â–‰â–‰â–‰â–‰â–‰â–‰â–‰â–‰" << endl;
+			  cout << "â–‰â–‰â–‰â–‰â–‰â–‰â–‰â–‰â–‰â˜…  â˜†          3.æ’åºç»Ÿè®¡å•†å“        â˜†  â˜…â–‰â–‰â–‰â–‰â–‰â–‰â–‰â–‰â–‰" << endl;
+			  cout << "â–‰â–‰â–‰â–‰â–‰â–‰â–‰â–‰â–‰â˜…  â˜†          4.æŸ¥æ‰¾è¶…å¸‚å•†å“        â˜†  â˜…â–‰â–‰â–‰â–‰â–‰â–‰â–‰â–‰â–‰" << endl;
+			  cout << "â–‰â–‰â–‰â–‰â–‰â–‰â–‰â–‰â–‰â˜…  â˜†          5.åˆ é™¤è¶…å¸‚å•†å“        â˜†  â˜…â–‰â–‰â–‰â–‰â–‰â–‰â–‰â–‰â–‰" << endl;
+			  cout << "â–‰â–‰â–‰â–‰â–‰â–‰â–‰â–‰â–‰â˜…  â˜†          6.ä¿®æ”¹è¶…å¸‚å•†å“        â˜†  â˜…â–‰â–‰â–‰â–‰â–‰â–‰â–‰â–‰â–‰" << endl;
+			  cout << "â–‰â–‰â–‰â–‰â–‰â–‰â–‰â–‰â–‰â˜…  â˜†          7.å”®å‡ºè¶…å¸‚å•†å“        â˜†  â˜…â–‰â–‰â–‰â–‰â–‰â–‰â–‰â–‰â–‰" << endl;
+			  cout << "â–‰â–‰â–‰â–‰â–‰â–‰â–‰â–‰â–‰â˜…  â˜†        8.ä¿å­˜è¶…å¸‚å•†å“ä¿¡æ¯      â˜†  â˜…â–‰â–‰â–‰â–‰â–‰â–‰â–‰â–‰â–‰" << endl;
+			  cout << "â–‰â–‰â–‰â–‰â–‰â–‰â–‰â–‰â–‰â˜…  â˜†          0.å®‰å…¨é€€å‡ºç³»ç»Ÿ        â˜†  â˜…â–‰â–‰â–‰â–‰â–‰â–‰â–‰â–‰â–‰" << endl;
 
-			  cout << "\t\t\n\t\t\t\t  ÇëÑ¡Ôñ£º0-8" << endl;
+			  cout << "\t\t\n\t\t\t\t  è¯·é€‰æ‹©ï¼š0-8" << endl;
 			  break; }
 	case 3:
 	{
 			  system("cls");
 			  cout << "********************************************************************************\n"
-				  << "\t   1. ĞŞ¸ÄÉÌÆ·Ãû      4. ĞŞ¸Ä½ø»õ¼Û\t\t7. ĞŞ¸Ä¾»ÀûÈó\n"
-				  << "\t   2. ĞŞ¸ÄÖÖÀà        5. ĞŞ¸ÄÊÛ³ö¼Û\t\t8. ĞŞ¸ÄĞŞ¸ÄÉÌÆ·²úµØ\n"
-				  << "\t   3. ĞŞ¸Ä±àºÅ        6. ĞŞ¸ÄÊ£ÓàÉÌÆ·Á¿\t\t9. ĞŞ¸ÄÉú²úÉÌÆ·ÅÆ\n"
-				  << "\t\t\t\t10.ĞŞ¸ÄÈ«²¿\n"
+				  << "\t   1. ä¿®æ”¹å•†å“å      4. ä¿®æ”¹è¿›è´§ä»·\t\t7. ä¿®æ”¹å‡€åˆ©æ¶¦\n"
+				  << "\t   2. ä¿®æ”¹ç§ç±»        5. ä¿®æ”¹å”®å‡ºä»·\t\t8. ä¿®æ”¹ä¿®æ”¹å•†å“äº§åœ°\n"
+				  << "\t   3. ä¿®æ”¹ç¼–å·        6. ä¿®æ”¹å‰©ä½™å•†å“é‡\t\t9. ä¿®æ”¹ç”Ÿäº§å•†å“ç‰Œ\n"
+				  << "\t\t\t\t10.ä¿®æ”¹å…¨éƒ¨\n"
 				  << "********************************************************************************" << endl;
-			  cout << "\t\t\n\t\t\t\t  ÇëÑ¡Ôñ£º0-10" << endl;
+			  cout << "\t\t\n\t\t\t\t  è¯·é€‰æ‹©ï¼š0-10" << endl;
 			  break;
 	}
 	case 4:
 	{
 			  system("cls");
 			  cout << "********************************************************************************\n"
-				  << "\t   1. °´½ø»õ¼ÛÅÅĞò        2. °´¿â´æÁ¿ÅÅĞò       3. °´¾»ÀûÈóÅÅĞò\n"
+				  << "\t   1. æŒ‰è¿›è´§ä»·æ’åº        2. æŒ‰åº“å­˜é‡æ’åº       3. æŒ‰å‡€åˆ©æ¶¦æ’åº\n"
 				  << "********************************************************************************" << endl;
-			  cout << "\t\t\n\t\t\t\t  ÇëÑ¡Ôñ£º0-3" << endl;
+			  cout << "\t\t\n\t\t\t\t  è¯·é€‰æ‹©ï¼š0-3" << endl;
 			  break;
 	}
 	case 5:
 	{
 			  system("cls");
 			  cout << "\n\t\t        *********************************\n";
-			  cout << "\t\t        *****   1.°´ÉÌÆ·µÄÃû³Æ²éÕÒ  *****\n\t\t        *****    2.°´ÉÌÆ·±àºÅ²éÕÒ   *****";
-			  cout << "\n\t\t        *********************************\nÇëÑ¡Ôñ£º0-2";
+			  cout << "\t\t        *****   1.æŒ‰å•†å“çš„åç§°æŸ¥æ‰¾  *****\n\t\t        *****    2.æŒ‰å•†å“ç¼–å·æŸ¥æ‰¾   *****";
+			  cout << "\n\t\t        *********************************\nè¯·é€‰æ‹©ï¼š0-2";
 			  break;
 	}
 	}
 }
 
-void Goodsmessage::Find()       //©k©k©k©k©k©k©k©k©k©k©k©k²éÕÒº¯Êı©k©k©k©k©k©k©k©k©k©k©k©k
+void Goodsmessage::Find()       
 {
 	system("cls");
 	char name[20], Id[10];
@@ -254,40 +254,40 @@ void Goodsmessage::Find()       //©k©k©k©k©k©k©k©k©k©k©k©k²éÕÒº¯Êı©k©k©k©k©k©k©k
 	cin >> x;
 	switch (x)
 	{
-	case 1:{cout << "\t\tÇëÊäÈëÒª²éÕÒµÄÉÌÆ·µÄÃû³Æ£º"; cin >> name;
+	case 1:{cout << "\t\tè¯·è¾“å…¥è¦æŸ¥æ‰¾çš„å•†å“çš„åç§°ï¼š"; cin >> name;
 		if (p = FindItem(name))
 		{
 			p->Next->Show();
-			cout << "ÊäÈëÈÎÒâ×Ö·û£¡¼ÌĞø¡­¡­";
+			cout << "è¾“å…¥ä»»æ„å­—ç¬¦ï¼ç»§ç»­â€¦â€¦";
 			_getch();
 		}
 		else
 		{
-			cout << "\t\tÃ»ÓĞÕÒµ½¸ÃÃû³ÆµÄÉÌÆ·£¡" << '\n' << endl;
-			cout << "ÊäÈëÈÎÒâ×Ö·û£¡¼ÌĞø¡­¡­";
+			cout << "\t\tæ²¡æœ‰æ‰¾åˆ°è¯¥åç§°çš„å•†å“ï¼" << '\n' << endl;
+			cout << "è¾“å…¥ä»»æ„å­—ç¬¦ï¼ç»§ç»­â€¦â€¦";
 			_getch();
 		}
 	}break;
 	case 2:
 	{
-			  cout << "\t\tÇëÊäÈëÒª²éÕÒµÄÉÌÆ·µÄ±àºÅ£º"; cin >> Id;
+			  cout << "\t\tè¯·è¾“å…¥è¦æŸ¥æ‰¾çš„å•†å“çš„ç¼–å·ï¼š"; cin >> Id;
 			  if (p = FindID(Id))
 			  {
 				  p->Next->Show();
-				  cout << "ÊäÈëÈÎÒâ×Ö·û£¡¼ÌĞø¡­¡­";
+				  cout << "è¾“å…¥ä»»æ„å­—ç¬¦ï¼ç»§ç»­â€¦â€¦";
 				  _getch();
 			  }
 			  else
 			  {
-				  cout << "\t\tÃ»ÓĞÕÒµ½¸Ã±àºÅµÄÉÌÆ·£¡" << '\n' << endl;
-				  cout << "ÊäÈëÈÎÒâ×Ö·û£¡¼ÌĞø¡­¡­";
+				  cout << "\t\tæ²¡æœ‰æ‰¾åˆ°è¯¥ç¼–å·çš„å•†å“ï¼" << '\n' << endl;
+				  cout << "è¾“å…¥ä»»æ„å­—ç¬¦ï¼ç»§ç»­â€¦â€¦";
 				 _getch();
 			  }
 	}break;
 	}
 }
 
-void Goodsmessage::ModifyItem()         //ĞŞ¸ÄÉÌÆ·ĞÅÏ¢
+void Goodsmessage::ModifyItem()         //ä¿®æ”¹å•†å“ä¿¡æ¯
 {
 
 	showMenu(3);
@@ -299,19 +299,19 @@ void Goodsmessage::ModifyItem()         //ĞŞ¸ÄÉÌÆ·ĞÅÏ¢
 	{
 			  char Id[20];
 			  Goods * p = NULL;
-			  cout << "\t\tÇëÊäÈëÒªĞŞ¸ÄµÄÉÌÆ·µÄ±àºÅ:"; cin >> Id;
+			  cout << "\t\tè¯·è¾“å…¥è¦ä¿®æ”¹çš„å•†å“çš„ç¼–å·:"; cin >> Id;
 			  if (p = FindID(Id))
 			  {
-				  cout << "\t\tÒÑÕÒµ½ÉÌÆ·µÄĞÅÏ¢£¬ÇëÊäÈëĞÂµÄĞÅÏ¢!" << endl;
+				  cout << "\t\tå·²æ‰¾åˆ°å•†å“çš„ä¿¡æ¯ï¼Œè¯·è¾“å…¥æ–°çš„ä¿¡æ¯!" << endl;
 				  p->Next->InputName();
-				  cout << "ĞŞ¸Ä³É¹¦£¡" << endl;
-				  cout << "ÊäÈëÈÎÒâ×Ö·û£¡¼ÌĞø¡­¡­";
+				  cout << "ä¿®æ”¹æˆåŠŸï¼" << endl;
+				  cout << "è¾“å…¥ä»»æ„å­—ç¬¦ï¼ç»§ç»­â€¦â€¦";
 				 _getch();
 			  }
 			  else
 			  {
-				  cout << "\t\tÃ»ÓĞÕÒµ½ÄúĞèÒªµÄÉÌÆ·!" << endl;
-				  cout << "ÊäÈëÈÎÒâ×Ö·û£¡¼ÌĞø¡­¡­";
+				  cout << "\t\tæ²¡æœ‰æ‰¾åˆ°æ‚¨éœ€è¦çš„å•†å“!" << endl;
+				  cout << "è¾“å…¥ä»»æ„å­—ç¬¦ï¼ç»§ç»­â€¦â€¦";
 				  _getch();
 			  }
 			  break;
@@ -320,19 +320,19 @@ void Goodsmessage::ModifyItem()         //ĞŞ¸ÄÉÌÆ·ĞÅÏ¢
 	{
 			  char Id[20];
 			  Goods * p = NULL;
-			  cout << "\t\tÇëÊäÈëÒªĞŞ¸ÄµÄÉÌÆ·µÄ±àºÅ:"; cin >> Id;
+			  cout << "\t\tè¯·è¾“å…¥è¦ä¿®æ”¹çš„å•†å“çš„ç¼–å·:"; cin >> Id;
 			  if (p = FindID(Id))
 			  {
-				  cout << "\t\tÒÑÕÒµ½ÉÌÆ·µÄĞÅÏ¢£¬ÇëÊäÈëĞÂµÄĞÅÏ¢!" << endl;
+				  cout << "\t\tå·²æ‰¾åˆ°å•†å“çš„ä¿¡æ¯ï¼Œè¯·è¾“å…¥æ–°çš„ä¿¡æ¯!" << endl;
 				  p->Next->InputKind();
-				  cout << "ĞŞ¸Ä³É¹¦£¡" << endl;
-				  cout << "ÊäÈëÈÎÒâ×Ö·û£¡¼ÌĞø¡­¡­";
+				  cout << "ä¿®æ”¹æˆåŠŸï¼" << endl;
+				  cout << "è¾“å…¥ä»»æ„å­—ç¬¦ï¼ç»§ç»­â€¦â€¦";
 				  _getch();
 			  }
 			  else
 			  {
-				  cout << "\t\tÃ»ÓĞÕÒµ½ÄúĞèÒªµÄÉÌÆ·!" << endl;
-				  cout << "ÊäÈëÈÎÒâ×Ö·û£¡¼ÌĞø¡­¡­";
+				  cout << "\t\tæ²¡æœ‰æ‰¾åˆ°æ‚¨éœ€è¦çš„å•†å“!" << endl;
+				  cout << "è¾“å…¥ä»»æ„å­—ç¬¦ï¼ç»§ç»­â€¦â€¦";
 				  _getch();
 			  }
 			  break;
@@ -341,19 +341,19 @@ void Goodsmessage::ModifyItem()         //ĞŞ¸ÄÉÌÆ·ĞÅÏ¢
 	{
 			  char Id[20];
 			  Goods * p = NULL;
-			  cout << "\t\tÇëÊäÈëÒªĞŞ¸ÄµÄÉÌÆ·µÄ±àºÅ:"; cin >> Id;
+			  cout << "\t\tè¯·è¾“å…¥è¦ä¿®æ”¹çš„å•†å“çš„ç¼–å·:"; cin >> Id;
 			  if (p = FindID(Id))
 			  {
-				  cout << "\t\tÒÑÕÒµ½ÉÌÆ·µÄĞÅÏ¢£¬ÇëÊäÈëĞÂµÄĞÅÏ¢!" << endl;
+				  cout << "\t\tå·²æ‰¾åˆ°å•†å“çš„ä¿¡æ¯ï¼Œè¯·è¾“å…¥æ–°çš„ä¿¡æ¯!" << endl;
 				  p->Next->InputID();
-				  cout << "ĞŞ¸Ä³É¹¦£¡" << endl;
-				  cout << "ÊäÈëÈÎÒâ×Ö·û£¡¼ÌĞø¡­¡­";
+				  cout << "ä¿®æ”¹æˆåŠŸï¼" << endl;
+				  cout << "è¾“å…¥ä»»æ„å­—ç¬¦ï¼ç»§ç»­â€¦â€¦";
 				  _getch();
 			  }
 			  else
 			  {
-				  cout << "\t\tÃ»ÓĞÕÒµ½ÄúĞèÒªµÄÉÌÆ·!" << endl;
-				  cout << "ÊäÈëÈÎÒâ×Ö·û£¡¼ÌĞø¡­¡­";
+				  cout << "\t\tæ²¡æœ‰æ‰¾åˆ°æ‚¨éœ€è¦çš„å•†å“!" << endl;
+				  cout << "è¾“å…¥ä»»æ„å­—ç¬¦ï¼ç»§ç»­â€¦â€¦";
 				  _getch();
 			  }
 			  break;
@@ -362,19 +362,19 @@ void Goodsmessage::ModifyItem()         //ĞŞ¸ÄÉÌÆ·ĞÅÏ¢
 	{
 			  char Id[20];
 			  Goods * p = NULL;
-			  cout << "\t\tÇëÊäÈëÒªĞŞ¸ÄµÄÉÌÆ·µÄ±àºÅ:"; cin >> Id;
+			  cout << "\t\tè¯·è¾“å…¥è¦ä¿®æ”¹çš„å•†å“çš„ç¼–å·:"; cin >> Id;
 			  if (p = FindID(Id))
 			  {
-				  cout << "\t\tÒÑÕÒµ½ÉÌÆ·µÄĞÅÏ¢£¬ÇëÊäÈëĞÂµÄĞÅÏ¢!" << endl;
+				  cout << "\t\tå·²æ‰¾åˆ°å•†å“çš„ä¿¡æ¯ï¼Œè¯·è¾“å…¥æ–°çš„ä¿¡æ¯!" << endl;
 				  p->Next->InputBuyprice();
-				  cout << "ĞŞ¸Ä³É¹¦£¡" << endl;
-				  cout << "ÊäÈëÈÎÒâ×Ö·û£¡¼ÌĞø¡­¡­";
+				  cout << "ä¿®æ”¹æˆåŠŸï¼" << endl;
+				  cout << "è¾“å…¥ä»»æ„å­—ç¬¦ï¼ç»§ç»­â€¦â€¦";
 				  _getch();
 			  }
 			  else
 			  {
-				  cout << "\t\tÃ»ÓĞÕÒµ½ÄúĞèÒªµÄÉÌÆ·!" << endl;
-				  cout << "ÊäÈëÈÎÒâ×Ö·û£¡¼ÌĞø¡­¡­";
+				  cout << "\t\tæ²¡æœ‰æ‰¾åˆ°æ‚¨éœ€è¦çš„å•†å“!" << endl;
+				  cout << "è¾“å…¥ä»»æ„å­—ç¬¦ï¼ç»§ç»­â€¦â€¦";
 				  _getch();
 			  }
 			  break;
@@ -383,19 +383,19 @@ void Goodsmessage::ModifyItem()         //ĞŞ¸ÄÉÌÆ·ĞÅÏ¢
 	{
 			  char Id[20];
 			  Goods * p = NULL;
-			  cout << "\t\tÇëÊäÈëÒªĞŞ¸ÄµÄÉÌÆ·µÄ±àºÅ:"; cin >> Id;
+			  cout << "\t\tè¯·è¾“å…¥è¦ä¿®æ”¹çš„å•†å“çš„ç¼–å·:"; cin >> Id;
 			  if (p = FindID(Id))
 			  {
-				  cout << "\t\tÒÑÕÒµ½ÉÌÆ·µÄĞÅÏ¢£¬ÇëÊäÈëĞÂµÄĞÅÏ¢!" << endl;
+				  cout << "\t\tå·²æ‰¾åˆ°å•†å“çš„ä¿¡æ¯ï¼Œè¯·è¾“å…¥æ–°çš„ä¿¡æ¯!" << endl;
 				  p->Next->InputSaleprice();
-				  cout << "ĞŞ¸Ä³É¹¦£¡" << endl;
-				  cout << "ÊäÈëÈÎÒâ×Ö·û£¡¼ÌĞø¡­¡­";
+				  cout << "ä¿®æ”¹æˆåŠŸï¼" << endl;
+				  cout << "è¾“å…¥ä»»æ„å­—ç¬¦ï¼ç»§ç»­â€¦â€¦";
 				  _getch();
 			  }
 			  else
 			  {
-				  cout << "\t\tÃ»ÓĞÕÒµ½ÄúĞèÒªµÄÉÌÆ·!" << endl;
-				  cout << "ÊäÈëÈÎÒâ×Ö·û£¡¼ÌĞø¡­¡­";
+				  cout << "\t\tæ²¡æœ‰æ‰¾åˆ°æ‚¨éœ€è¦çš„å•†å“!" << endl;
+				  cout << "è¾“å…¥ä»»æ„å­—ç¬¦ï¼ç»§ç»­â€¦â€¦";
 				  _getch();
 			  }
 			  break;
@@ -404,19 +404,19 @@ void Goodsmessage::ModifyItem()         //ĞŞ¸ÄÉÌÆ·ĞÅÏ¢
 	{
 			  char Id[20];
 			  Goods * p = NULL;
-			  cout << "\t\tÇëÊäÈëÒªĞŞ¸ÄµÄÉÌÆ·µÄ±àºÅ:"; cin >> Id;
+			  cout << "\t\tè¯·è¾“å…¥è¦ä¿®æ”¹çš„å•†å“çš„ç¼–å·:"; cin >> Id;
 			  if (p = FindID(Id))
 			  {
-				  cout << "\t\tÒÑÕÒµ½ÉÌÆ·µÄĞÅÏ¢£¬ÇëÊäÈëĞÂµÄĞÅÏ¢!" << endl;
+				  cout << "\t\tå·²æ‰¾åˆ°å•†å“çš„ä¿¡æ¯ï¼Œè¯·è¾“å…¥æ–°çš„ä¿¡æ¯!" << endl;
 				  p->Next->InputAmount();
-				  cout << "ĞŞ¸Ä³É¹¦£¡" << endl;
-				  cout << "ÊäÈëÈÎÒâ×Ö·û£¡¼ÌĞø¡­¡­";
+				  cout << "ä¿®æ”¹æˆåŠŸï¼" << endl;
+				  cout << "è¾“å…¥ä»»æ„å­—ç¬¦ï¼ç»§ç»­â€¦â€¦";
 				  _getch();
 			  }
 			  else
 			  {
-				  cout << "\t\tÃ»ÓĞÕÒµ½ÄúĞèÒªµÄÉÌÆ·!" << endl;
-				  cout << "ÊäÈëÈÎÒâ×Ö·û£¡¼ÌĞø¡­¡­";
+				  cout << "\t\tæ²¡æœ‰æ‰¾åˆ°æ‚¨éœ€è¦çš„å•†å“!" << endl;
+				  cout << "è¾“å…¥ä»»æ„å­—ç¬¦ï¼ç»§ç»­â€¦â€¦";
 				  _getch();
 			  }
 			  break;
@@ -425,19 +425,19 @@ void Goodsmessage::ModifyItem()         //ĞŞ¸ÄÉÌÆ·ĞÅÏ¢
 	{
 			  char Id[20];
 			  Goods * p = NULL;
-			  cout << "\t\tÇëÊäÈëÒªĞŞ¸ÄµÄÉÌÆ·µÄ±àºÅ:"; cin >> Id;
+			  cout << "\t\tè¯·è¾“å…¥è¦ä¿®æ”¹çš„å•†å“çš„ç¼–å·:"; cin >> Id;
 			  if (p = FindID(Id))
 			  {
-				  cout << "\t\tÒÑÕÒµ½ÉÌÆ·µÄĞÅÏ¢£¬ÇëÊäÈëĞÂµÄĞÅÏ¢!" << endl;
+				  cout << "\t\tå·²æ‰¾åˆ°å•†å“çš„ä¿¡æ¯ï¼Œè¯·è¾“å…¥æ–°çš„ä¿¡æ¯!" << endl;
 				  p->Next->InputProfit();
-				  cout << "ĞŞ¸Ä³É¹¦£¡" << endl;
-				  cout << "ÊäÈëÈÎÒâ×Ö·û£¡¼ÌĞø¡­¡­";
+				  cout << "ä¿®æ”¹æˆåŠŸï¼" << endl;
+				  cout << "è¾“å…¥ä»»æ„å­—ç¬¦ï¼ç»§ç»­â€¦â€¦";
 				  _getch();
 			  }
 			  else
 			  {
-				  cout << "\t\tÃ»ÓĞÕÒµ½ÄúĞèÒªµÄÉÌÆ·!" << endl;
-				  cout << "ÊäÈëÈÎÒâ×Ö·û£¡¼ÌĞø¡­¡­";
+				  cout << "\t\tæ²¡æœ‰æ‰¾åˆ°æ‚¨éœ€è¦çš„å•†å“!" << endl;
+				  cout << "è¾“å…¥ä»»æ„å­—ç¬¦ï¼ç»§ç»­â€¦â€¦";
 				  _getch();
 			  }
 			  break;
@@ -446,19 +446,19 @@ void Goodsmessage::ModifyItem()         //ĞŞ¸ÄÉÌÆ·ĞÅÏ¢
 	{
 			  char Id[20];
 			  Goods * p = NULL;
-			  cout << "\t\tÇëÊäÈëÒªĞŞ¸ÄµÄÉÌÆ·µÄ±àºÅ:"; cin >> Id;
+			  cout << "\t\tè¯·è¾“å…¥è¦ä¿®æ”¹çš„å•†å“çš„ç¼–å·:"; cin >> Id;
 			  if (p = FindID(Id))
 			  {
-				  cout << "\t\tÒÑÕÒµ½ÉÌÆ·µÄĞÅÏ¢£¬ÇëÊäÈëĞÂµÄĞÅÏ¢!" << endl;
+				  cout << "\t\tå·²æ‰¾åˆ°å•†å“çš„ä¿¡æ¯ï¼Œè¯·è¾“å…¥æ–°çš„ä¿¡æ¯!" << endl;
 				  p->Next->InputPlace();
-				  cout << "ĞŞ¸Ä³É¹¦£¡" << endl;
-				  cout << "ÊäÈëÈÎÒâ×Ö·û£¡¼ÌĞø¡­¡­";
+				  cout << "ä¿®æ”¹æˆåŠŸï¼" << endl;
+				  cout << "è¾“å…¥ä»»æ„å­—ç¬¦ï¼ç»§ç»­â€¦â€¦";
 				 _getch();
 			  }
 			  else
 			  {
-				  cout << "\t\tÃ»ÓĞÕÒµ½ÄúĞèÒªµÄÉÌÆ·!" << endl;
-				  cout << "ÊäÈëÈÎÒâ×Ö·û£¡¼ÌĞø¡­¡­";
+				  cout << "\t\tæ²¡æœ‰æ‰¾åˆ°æ‚¨éœ€è¦çš„å•†å“!" << endl;
+				  cout << "è¾“å…¥ä»»æ„å­—ç¬¦ï¼ç»§ç»­â€¦â€¦";
 				  _getch();
 			  }
 			  break;
@@ -467,19 +467,19 @@ void Goodsmessage::ModifyItem()         //ĞŞ¸ÄÉÌÆ·ĞÅÏ¢
 	{
 			  char Id[20];
 			  Goods * p = NULL;
-			  cout << "\t\tÇëÊäÈëÒªĞŞ¸ÄµÄÉÌÆ·µÄ±àºÅ:"; cin >> Id;
+			  cout << "\t\tè¯·è¾“å…¥è¦ä¿®æ”¹çš„å•†å“çš„ç¼–å·:"; cin >> Id;
 			  if (p = FindID(Id))
 			  {
-				  cout << "\t\tÒÑÕÒµ½ÉÌÆ·µÄĞÅÏ¢£¬ÇëÊäÈëĞÂµÄĞÅÏ¢!" << endl;
+				  cout << "\t\tå·²æ‰¾åˆ°å•†å“çš„ä¿¡æ¯ï¼Œè¯·è¾“å…¥æ–°çš„ä¿¡æ¯!" << endl;
 				  p->Next->Inputbrand();
-				  cout << "ĞŞ¸Ä³É¹¦£¡" << endl;
-				  cout << "ÊäÈëÈÎÒâ×Ö·û£¡¼ÌĞø¡­¡­";
+				  cout << "ä¿®æ”¹æˆåŠŸï¼" << endl;
+				  cout << "è¾“å…¥ä»»æ„å­—ç¬¦ï¼ç»§ç»­â€¦â€¦";
 				  _getch();
 			  }
 			  else
 			  {
-				  cout << "\t\tÃ»ÓĞÕÒµ½ÄúĞèÒªµÄÉÌÆ·!" << endl;
-				  cout << "ÊäÈëÈÎÒâ×Ö·û£¡¼ÌĞø¡­¡­";
+				  cout << "\t\tæ²¡æœ‰æ‰¾åˆ°æ‚¨éœ€è¦çš„å•†å“!" << endl;
+				  cout << "è¾“å…¥ä»»æ„å­—ç¬¦ï¼ç»§ç»­â€¦â€¦";
 				  _getch();
 			  }
 			  break;
@@ -488,19 +488,19 @@ void Goodsmessage::ModifyItem()         //ĞŞ¸ÄÉÌÆ·ĞÅÏ¢
 	{
 			   char Id[20];
 			   Goods * p = NULL;
-			   cout << "\t\tÇëÊäÈëÒªĞŞ¸ÄµÄÉÌÆ·µÄ±àºÅ:"; cin >> Id;
+			   cout << "\t\tè¯·è¾“å…¥è¦ä¿®æ”¹çš„å•†å“çš„ç¼–å·:"; cin >> Id;
 			   if (p = FindID(Id))
 			   {
-				   cout << "\t\tÒÑÕÒµ½ÉÌÆ·µÄĞÅÏ¢£¬ÇëÊäÈëĞÂµÄĞÅÏ¢!" << endl;
+				   cout << "\t\tå·²æ‰¾åˆ°å•†å“çš„ä¿¡æ¯ï¼Œè¯·è¾“å…¥æ–°çš„ä¿¡æ¯!" << endl;
 				   p->Next->InputAll();
-				   cout << "ĞŞ¸Ä³É¹¦£¡" << endl;
-				   cout << "ÊäÈëÈÎÒâ×Ö·û£¡¼ÌĞø¡­¡­";
+				   cout << "ä¿®æ”¹æˆåŠŸï¼" << endl;
+				   cout << "è¾“å…¥ä»»æ„å­—ç¬¦ï¼ç»§ç»­â€¦â€¦";
 				   _getch();
 			   }
 			   else
 			   {
-				   cout << "\t\tÃ»ÓĞÕÒµ½ÄúĞèÒªµÄÉÌÆ·!" << endl;
-				   cout << "ÊäÈëÈÎÒâ×Ö·û£¡¼ÌĞø¡­¡­";
+				   cout << "\t\tæ²¡æœ‰æ‰¾åˆ°æ‚¨éœ€è¦çš„å•†å“!" << endl;
+				   cout << "è¾“å…¥ä»»æ„å­—ç¬¦ï¼ç»§ç»­â€¦â€¦";
 				   _getch();
 			   }
 	}
@@ -508,35 +508,35 @@ void Goodsmessage::ModifyItem()         //ĞŞ¸ÄÉÌÆ·ĞÅÏ¢
 
 }
 
-void Goodsmessage::RemoveItem()          //©k©k©k©k©k©k©k©k©k©k©k©kÉ¾³ıÉÌÆ·ĞÅÏ¢©k©k©k©k©k©k©k©k©k©k©k©k
+void Goodsmessage::RemoveItem()          
 {
 	system("cls");
 	char Id[20];
 	Goods * p = NULL, *temp = NULL;
-	cout << "\t\tÇëÊäÈëÒªÉ¾³ıµÄÉÌÆ·µÄ±àºÅ:" << endl; cin >> Id;
+	cout << "\t\tè¯·è¾“å…¥è¦åˆ é™¤çš„å•†å“çš„ç¼–å·:" << endl; cin >> Id;
 	if (p = FindID(Id))
 	{
 		temp = p->Next;
 		p->Next = p->Next->Next;
 		delete temp;
-		cout << "\t\tÉ¾³ı³É¹¦!" << endl;
-		cout << "ÊäÈëÈÎÒâ×Ö·û£¡¼ÌĞø¡­¡­";
+		cout << "\t\tåˆ é™¤æˆåŠŸ!" << endl;
+		cout << "è¾“å…¥ä»»æ„å­—ç¬¦ï¼ç»§ç»­â€¦â€¦";
 		_getch();
 	}
 	else
 	{
-		cout << "\t\tÃ»ÓĞÕÒµ½ÄúĞèÒªµÄÉÌÆ·!" << endl;
-		cout << "ÊäÈëÈÎÒâ×Ö·û£¡¼ÌĞø¡­¡­";
+		cout << "\t\tæ²¡æœ‰æ‰¾åˆ°æ‚¨éœ€è¦çš„å•†å“!" << endl;
+		cout << "è¾“å…¥ä»»æ„å­—ç¬¦ï¼ç»§ç»­â€¦â€¦";
 		_getch();
 	}
 }
-void Goodsmessage::Saleprice()           //©k©k©k©k©k©k©k©k©k©k©k©kÊÛ³öÉÌÆ·©k©k©k©k©k©k©k©k©k©k©k©k
+void Goodsmessage::Saleprice()     
 {
 	system("cls");
 	char Id[20]; int i;
 	Goods * p = NULL;
 	Goods * temp = NULL;
-	cout << "\t\tÇëÊäÈëÒªÊÛ³öµÄÉÌÆ·µÄ±àºÅºÍÊıÁ¿:" << endl; cin >> Id; cin >> i;
+	cout << "\t\tè¯·è¾“å…¥è¦å”®å‡ºçš„å•†å“çš„ç¼–å·å’Œæ•°é‡:" << endl; cin >> Id; cin >> i;
 
 	if (p = FindID(Id))
 	{
@@ -545,21 +545,21 @@ void Goodsmessage::Saleprice()           //©k©k©k©k©k©k©k©k©k©k©k©kÊÛ³öÉÌÆ·©k©k©
 			p->Next->amount -= i;
 			p->Next->amount1 += i;
 			p->Next->profit += i*(p->Next->saleprice - p->Next->buyprice);
-			cout << "ÉÌÆ·ÊÛ³ö³É¹¦!" << "\n";
-			cout << "ÊÛ³öÉÌÆ·±àºÅ: " << Id << "\t" << "ÊıÁ¿: " << i << "\n";
+			cout << "å•†å“å”®å‡ºæˆåŠŸ!" << "\n";
+			cout << "å”®å‡ºå•†å“ç¼–å·: " << Id << "\t" << "æ•°é‡: " << i << "\n";
 			cout << "\n";
-			cout << "ÊÛ³öºóÉÌÆ·ĞÅÏ¢: " << endl;
+			cout << "å”®å‡ºåå•†å“ä¿¡æ¯: " << endl;
 
 			p->Next->Show();
 			Save();
-			cout << "ÊäÈëÈÎÒâ×Ö·û£¡¼ÌĞø¡­¡­";
+			cout << "è¾“å…¥ä»»æ„å­—ç¬¦ï¼ç»§ç»­â€¦â€¦";
 			_getch();
 
 		}
 		else
 		{
-			cout << "ÉÌÆ·ÊıÁ¿²»¹»£¬²»ÄÜ¹ºÂò" << endl;
-			cout << "ÊäÈëÈÎÒâ×Ö·û£¡¼ÌĞø¡­¡­";
+			cout << "å•†å“æ•°é‡ä¸å¤Ÿï¼Œä¸èƒ½è´­ä¹°" << endl;
+			cout << "è¾“å…¥ä»»æ„å­—ç¬¦ï¼ç»§ç»­â€¦â€¦";
 			_getch();
 			Saleprice();
 		}
@@ -567,14 +567,14 @@ void Goodsmessage::Saleprice()           //©k©k©k©k©k©k©k©k©k©k©k©kÊÛ³öÉÌÆ·©k©k©
 	}
 	else
 	{
-		cout << "ÎŞ´ËÖÖÉÌÆ·£¬²»ÄÜ¹ºÂò" << endl;
-		cout << "ÊäÈëÈÎÒâ×Ö·û£¡¼ÌĞø¡­¡­";
+		cout << "æ— æ­¤ç§å•†å“ï¼Œä¸èƒ½è´­ä¹°" << endl;
+		cout << "è¾“å…¥ä»»æ„å­—ç¬¦ï¼ç»§ç»­â€¦â€¦";
 		_getch();
 		showMenu(2);
 	}
 
 }
-void Goodsmessage::Swap(Goods *p1, Goods *p2)        //½»»»Á½¸öÉÌÆ·µÄÊı¾İ
+void Goodsmessage::Swap(Goods *p1, Goods *p2)        //äº¤æ¢ä¸¤ä¸ªå•†å“çš„æ•°æ®
 {
 	Goods *temp = new Goods;
 	strcpy(temp->name, p1->name);
@@ -608,7 +608,7 @@ void Goodsmessage::Swap(Goods *p1, Goods *p2)        //½»»»Á½¸öÉÌÆ·µÄÊı¾İ
 	strcpy(p2->brand, temp->brand);
 }
 
-int Goodsmessage::ListCount()       //Í³¼Æµ±Ç°Á´±íµÄ¼ÇÂ¼×ÜÊı£¬·µ»ØÒ»¸öÕûÊı
+int Goodsmessage::ListCount()       //ç»Ÿè®¡å½“å‰é“¾è¡¨çš„è®°å½•æ€»æ•°ï¼Œè¿”å›ä¸€ä¸ªæ•´æ•°
 {
 	if (!Head)
 		return 0;
@@ -620,7 +620,7 @@ int Goodsmessage::ListCount()       //Í³¼Æµ±Ç°Á´±íµÄ¼ÇÂ¼×ÜÊı£¬·µ»ØÒ»¸öÕûÊı
 	return n;
 }
 
-void Goodsmessage::Paixu()       //©k©k©k©k©k©k©k©k©k©kÅÅĞòÉÌÆ·©k©k©k©k©k©k©k©k©k©k©k©k©k©k
+void Goodsmessage::Paixu()      
 {
 	showMenu(4);
 	int x;
@@ -630,7 +630,7 @@ void Goodsmessage::Paixu()       //©k©k©k©k©k©k©k©k©k©kÅÅĞòÉÌÆ·©k©k©k©k©k©k©k©k©
 	case 1:
 	{
 			  system("cls");
-			  cout << "\t\tÅÅĞòÖĞ..." << endl;
+			  cout << "\t\tæ’åºä¸­..." << endl;
 			  cout << "\n";
 			  Goods *p = NULL, *p1 = NULL, *k = NULL;
 			  int n = Goodsmessage::ListCount();
@@ -645,19 +645,19 @@ void Goodsmessage::Paixu()       //©k©k©k©k©k©k©k©k©k©kÅÅĞòÉÌÆ·©k©k©k©k©k©k©k©k©
 				  }
 			  }
 			  Display();
-			  out.open("½ø»õ¼Û.txt");
+			  out.open("è¿›è´§ä»·.txt");
 			  for (Goods *q = Head->Next; q != End; q = q->Next)
 				  out << q->name << "\t" << q->kind << "\t" << q->Id << "\t" << q->buyprice << "\t" << q->saleprice << "\t" << q->amount << "\t" << q->place << "\t" << q->brand << "\t" << q->profit << '\n';
 			  out.close();
-			  cout << "±£´æĞÅÏ¢³É¹¦" << endl;
-			  cout << "ÅÅĞòÍê³É£¡" << endl;
+			  cout << "ä¿å­˜ä¿¡æ¯æˆåŠŸ" << endl;
+			  cout << "æ’åºå®Œæˆï¼" << endl;
 			  _getch();
 			  return;
 	}
 	case 2:
 	{
 			  system("cls");
-			  cout << "\t\tÅÅĞòÖĞ..." << endl;
+			  cout << "\t\tæ’åºä¸­..." << endl;
 			  cout << "\n";
 			  Goods *p = NULL, *p1 = NULL, *k = NULL;
 			  int n = Goodsmessage::ListCount();
@@ -672,19 +672,19 @@ void Goodsmessage::Paixu()       //©k©k©k©k©k©k©k©k©k©kÅÅĞòÉÌÆ·©k©k©k©k©k©k©k©k©
 				  }
 			  }
 			  Display();
-			  out.open("¿â´æÁ¿.txt");
+			  out.open("åº“å­˜é‡.txt");
 			  for (Goods *q = Head->Next; q != End; q = q->Next)
 				  out << q->name << "\t" << q->kind << "\t" << q->Id << "\t" << q->buyprice << "\t" << q->saleprice << "\t" << q->amount << "\t" << q->place << "\t" << q->brand << "\t" << q->profit << '\n';
 			  out.close();
-			  cout << "±£´æĞÅÏ¢³É¹¦" << endl;
-			  cout << "ÅÅĞòÍê³É£¡" << endl;
+			  cout << "ä¿å­˜ä¿¡æ¯æˆåŠŸ" << endl;
+			  cout << "æ’åºå®Œæˆï¼" << endl;
 			  _getch();
 			  return;
 	}
 	case 3:
 	{
 			  system("cls");
-			  cout << "\t\tÅÅĞòÖĞ..." << endl;
+			  cout << "\t\tæ’åºä¸­..." << endl;
 			  cout << "\n";
 			  Goods *p = NULL, *p1 = NULL, *k = NULL;
 			  int n = Goodsmessage::ListCount();
@@ -699,12 +699,12 @@ void Goodsmessage::Paixu()       //©k©k©k©k©k©k©k©k©k©kÅÅĞòÉÌÆ·©k©k©k©k©k©k©k©k©
 				  }
 			  }
 			  Display();
-			  out.open("¾»ÀûÈó.txt");
+			  out.open("å‡€åˆ©æ¶¦.txt");
 			  for (Goods *q = Head->Next; q != End; q = q->Next)
 				  out << q->name << "\t" << q->kind << "\t" << q->Id << "\t" << q->buyprice << "\t" << q->saleprice << "\t" << q->amount << "\t" << q->place << "\t" << q->brand << "\t" << q->profit << '\n';
 			  out.close();
-			  cout << "±£´æĞÅÏ¢³É¹¦" << endl;
-			  cout << "ÅÅĞòÍê³É£¡" << endl;
+			  cout << "ä¿å­˜ä¿¡æ¯æˆåŠŸ" << endl;
+			  cout << "æ’åºå®Œæˆï¼" << endl;
 			  _getch();
 			  return;
 	}
@@ -712,14 +712,14 @@ void Goodsmessage::Paixu()       //©k©k©k©k©k©k©k©k©k©kÅÅĞòÉÌÆ·©k©k©k©k©k©k©k©k©
 }
 
 
-void Goodsmessage::Save()       //©k©k©k©k©k©k©k©k©k©k©k±£´æÉÌÆ·ĞÅÏ¢µ½ÎÄ¼şº¯Êı©k©k©k©k©k©k©k©k©k©k©k©k©k
+void Goodsmessage::Save()       
 {
 	out.open("supermarket.txt");
 	for (Goods *p = Head->Next; p != End; p = p->Next)
 		out << p->name << "\t" << p->kind << "\t" << p->Id << "\t" << p->buyprice << "\t" << p->saleprice << "\t" << p->amount << "\t" << p->place << "\t" << p->brand << "\t" << p->profit << '\n';
 
 	out.close();
-	cout << "±£´æĞÅÏ¢³É¹¦" << endl;
+	cout << "ä¿å­˜ä¿¡æ¯æˆåŠŸ" << endl;
 }
 
 
@@ -727,12 +727,12 @@ int main()
 {
 	cout << "\t\t" << endl;
 	for (int i = 0; i<3; i++)
-		cout << "\t\t¡é\t\t\t\t\t\t¡é" << endl; cout << "\t\t¡é¡ï¡ï¡ï¡ï¡¾»¶Ó­½øÈë³¬ÊĞÉÌÆ·¹ÜÀíÏµÍ³¡¿¡ï¡ï¡ï¡ï¡é" << endl;
+		cout << "\t\tï¿ \t\t\t\t\t\tï¿ " << endl; cout << "\t\tï¿ â˜…â˜…â˜…â˜…ã€æ¬¢è¿è¿›å…¥è¶…å¸‚å•†å“ç®¡ç†ç³»ç»Ÿã€‘â˜…â˜…â˜…â˜…ï¿ " << endl;
 	for (int i = 0; i<3; i++)
-		cout << "\t\t¡é\t\t\t\t\t\t¡é" << endl;
+		cout << "\t\tï¿ \t\t\t\t\t\tï¿ " << endl;
 	cout << "\t\t$$\n" << endl;;
 	Goodsmessage Grade;
-	cout << "\t\t\t\t°´ÈÎÒâ¼ü¿ªÊ¼¡­¡­";
+	cout << "\t\t\t\tæŒ‰ä»»æ„é”®å¼€å§‹â€¦â€¦";
 	_getch();
 	int x;
 	bool quit = false;
